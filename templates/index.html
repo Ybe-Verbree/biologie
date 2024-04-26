@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biologie Onderzoek</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script>
+         const userID = "{{ user_id }}";
+    </script>
+    <script src="{{ url_for('static', filename='js/site.js') }}"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Biologie onderzoek</h1>
+        <h2>We zijn u dankbaar dat u onze enquête wilt invullen!</h2>
+        <button onclick="pageInfo()">Start</button>        
+    </div>
+
+    <div class="disclamer">
+	    <h3>Deze site verzameld alleen gegevends die u invuld!</h3>
+        <h3>Wij zien dus niet wie u bent en ook geen ip-adress!</h3>  
+    </div>
+
+</body>
+</html>

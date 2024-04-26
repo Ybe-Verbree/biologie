@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biologie Onderzoek</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vragen.css') }}">
+    <script>
+        const userID = "{{ user_id }}";
+    </script>
+    <script src="{{ url_for('static', filename='js/vragen.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/kleuren.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <div id="intro-tekst" class="container">
+        <h2>We gaan nu echt beginnen!</h2>
+        <p>In deze vragenlijst zullen we je een aantal rekensommen laten zien. Voor elke rekensom krijg je vier mogelijke antwoorden te zien, waarvan er één het juiste antwoord is. We zullen bijhouden hoelang je erover doet om een antwoord te kiezen.</p>
+        <p>Na drie rekensommen zal er een minigame worden getoond. Daarna zal het proces zich herhalen met nieuwe rekensommen en een nieuwe achtergrondkleur.</p>
+        <button id="start-knop">Start</button>
+    </div>
+
+    <div id="vragenlijst" class="hidden container">
+        <div id="rekensom-container">
+            <h3>Rekensommen</h3>
+            <p id="rekensom-tekst"></p>
+            <div id="antwoorden-container"></div>
+            <p id="feedback"></p>
+        </div>
+        <div id="spelletje" class="hidden">
+            <!-- Hier komt het spelletje -->
+        </div>
+        <div id="einde-container" class="hidden">
+            <h3>Bedankt voor het deelnemen!</h3>
+            <button id="extra-informatie-knop">Extra informatie</button>
+            <button id="klaar-knop">Ik ben klaar</button>
+        </div>
+    </div>
+</body>
+</html>

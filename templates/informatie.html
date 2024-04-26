@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biologie Onderzoek</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script>
+         const userID = "{{ user_id }}";
+    </script>
+    <script src="{{ url_for('static', filename='js/site.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+		<h1>Algemeenen informatie</h1>
+		<form id="informatie-form" action="/opslaan" id="informatie-form" method="post">
+
+            <input type="hidden" name="user_id" id="user_id" value="{{ user_id }}">
+
+            <label for="leeftijd">Leeftijd:</label>
+            <input type="number" id="leeftijd" name="leeftijd" required><br><br>
+
+            <label for="geslacht">Geslacht:</label>
+            <select id="geslacht" name="geslacht" required>
+                <option value="">Selecteer een optie</option>
+                <option value="man">Man</option>
+                <option value="vrouw">Vrouw</option>
+                <option value="nvt">Zeg ik liever niet</option>
+            </select><br><br>
+
+            <button type="submit">Volgende</button>
+        </form>
+	</div>
+</body>
+</html>
